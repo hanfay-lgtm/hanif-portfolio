@@ -1,0 +1,421 @@
+/* ====== RESET & BASE ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #111;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 800;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  padding: 80px 60px;
+}
+
+/* ====== REUSABLE BUTTONS ====== */
+.btn-dark {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: 0.2s ease;
+}
+.btn-dark:hover {
+  background: #333;
+}
+
+.btn-outline {
+  display: inline-block;
+  background: #fff;
+  color: #111;
+  border: 2px solid #111;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: 0.2s ease;
+}
+.btn-outline:hover {
+  background: #111;
+  color: #fff;
+}
+
+.btn-dark-outline {
+  display: inline-block;
+  background: transparent;
+  color: #111;
+  border: 2px solid #111;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.badge {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+/* ====== IMAGE PLACEHOLDER ====== */
+.image-placeholder {
+  background: #fff;
+  border: 2px solid #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 320px;
+  border-radius: 4px;
+}
+
+.image-placeholder.tall {
+  height: 500px;
+}
+
+.image-placeholder.small {
+  height: 220px;
+  margin-top: 16px;
+}
+
+.icon-img {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #111;
+  border-radius: 6px;
+  position: relative;
+  display: inline-block;
+}
+.icon-img::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 6px;
+  height: 6px;
+  border: 2px solid #111;
+  border-radius: 50%;
+}
+.icon-img::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid #111;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 60px;
+  background: #f5f5f5;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-box {
+  width: 28px;
+  height: 28px;
+  background: #111;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.logo-text {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid #111;
+  padding-bottom: 4px;
+}
+
+/* ====== HERO ====== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding-top: 60px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 520px;
+}
+
+.hero-text h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.line {
+  display: block;
+  width: 70px;
+  height: 6px;
+  background: #111;
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+
+.desc {
+  color: #555;
+  margin: 18px 0 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+/* ====== ABOUT ====== */
+.about {
+  display: flex;
+  gap: 60px;
+  background: #fff;
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 1.3;
+}
+
+.about-text h2 {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+.about-text h3 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+
+.about-text ul li {
+  margin-bottom: 8px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.about-text ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+.about-image {
+  flex: 1;
+}
+
+/* ====== WHAT DO I DO ====== */
+.whatido {
+  text-align: center;
+}
+
+.whatido h2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.whatido-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  text-align: left;
+}
+
+.whatido-item h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.whatido-item p {
+  color: #444;
+}
+
+.img-first {
+  display: flex;
+  flex-direction: column;
+}
+.img-first h3 {
+  margin-top: 16px;
+}
+
+/* ====== PROJECT ====== */
+.project {
+  background: #fff;
+  text-align: center;
+}
+
+.project h2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  text-align: left;
+}
+
+.project-img {
+  height: 260px;
+}
+
+.project-item h3 {
+  margin-top: 16px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+/* ====== CONTACT ====== */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  background: #f5f5f5;
+}
+
+.contact-text {
+  flex: 1.2;
+}
+
+.contact-text h1 {
+  font-size: 36px;
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
+
+.contact-text h2 {
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+
+.contact-info {
+  margin: 24px 0 30px;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hill-shape {
+  width: 100%;
+  max-width: 380px;
+  height: 380px;
+  border: 3px solid #111;
+  border-radius: 30%;
+  background: linear-gradient(to bottom, #cfe8fb 0%, #cfe8fb 55%, #8bc34a 55%, #689f38 100%);
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  padding: 24px;
+  background: #111;
+  color: #fff;
+  font-size: 13px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+  section {
+    padding: 50px 24px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 24px;
+  }
+
+  .nav-links {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero,
+  .about,
+  .contact {
+    flex-direction: column;
+  }
+
+  .whatido-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+}
